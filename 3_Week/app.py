@@ -3,6 +3,7 @@
 
 
 from services import add_inventory, show_inventory, search_product, update_product,delete_product, calcular_estadisticas
+from files import guardar_csv, cargar_csv
 
 inventario = []
 # add_inventory(inventario, "Lápiz", 500.0, 10)
@@ -68,12 +69,14 @@ def menu():
                 print("\nProducto NO encontrado.")
   
             
-        # elif opcion == "6":
-        #     statistics()
-        # elif opcion == "7":
-        #     save_csv()
-        # elif opcion == "8":
-        #     upload_csv()
+        elif opcion == "6":
+            calcular_estadisticas(inventario)
+        elif opcion == "7":
+            ruta = input("Ruta para guardar CSV (ej: inventario.csv): ").strip()
+            guardar_csv(inventario, ruta)
+        elif opcion == "8":
+            ruta = input("Ruta del archivo CSV a cargar: ").strip()
+            cargado = cargar_csv(ruta, inventario)
         elif opcion == "9":
             print("Saliendo del programa.")
             break
