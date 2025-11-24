@@ -89,11 +89,3 @@ Subflujo:
    - **Fusionar**
 4. Actualiza inventario.
 5. Muestra mensaje final.
-
-## ▶️ Ejecución
-
-Para ejecutar el programa:
-
-```bash
-python main.py
-```
